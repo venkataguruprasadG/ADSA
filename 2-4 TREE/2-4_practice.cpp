@@ -47,4 +47,23 @@ int main()
         root->n = 1;
         root = newRoot;
     }
+
+    Node *rightChild = root->child[1];
+    rightChild->keys[1] = 40;
+    rightChild->n = 2;
+
+    rightChild->keys[2] = rightChild->keys[1];
+    rightChild->keys[1] = 35;
+    rightChild->n++;
+
+    cout << rightChild->keys[0] << " " << rightChild->keys[1] << " " << rightChild->keys[2] << endl;
+
+    root->keys[1] = 35;
+    root->n++;
+
+    Node *newRight = createNode(true);
+    newRight->keys[0] = 40;
+    newRight->n = 1;
+
+    root->child[2] = newRight;
 }
