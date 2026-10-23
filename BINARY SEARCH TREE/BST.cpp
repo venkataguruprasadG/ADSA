@@ -57,4 +57,6 @@ int main()
     root = insertNode(root, 7);
 
     inorder(root);
+
+    return 0;
 }
